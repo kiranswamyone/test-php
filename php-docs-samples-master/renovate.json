@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "config:base",
+    ":preserveSemverRanges"
+  ],
+  "packageRules": [{
+      "paths": ["testing/composer.json"],
+      "excludePackageNames": ["phpunit/phpunit"]
+    }, {
+      "matchPaths": ["functions/**"],
+      "branchPrefix": "renovate/functions-"
+    }],
+  "ignorePaths": [
+      "appengine/flexible/"
+  ],
+  "branchPrefix": "renovate/{{parentDir}}-",
+  "prConcurrentLimit": 10,
+  "dependencyDashboard": true
+}

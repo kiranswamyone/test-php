@@ -1,0 +1,17 @@
+{
+    "require": {
+        "ext-phar": "*",
+        "ext-zip": "*",
+        "paragonie/random_compat": "^9.0",
+        "symfony/console": "^3.0",
+        "google/cloud-tools": "^0.12.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Google\\Cloud\\Samples\\AppEngine\\Flexible\\WordPress\\": "test"
+        }
+    }
+}

@@ -1,0 +1,6 @@
+runtime: php81
+
+handlers:
+- url: /pubsub\.js
+  static_files: pubsub.js
+  upload: pubsub\.js

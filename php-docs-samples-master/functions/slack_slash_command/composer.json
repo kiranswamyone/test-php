@@ -1,0 +1,18 @@
+{
+    "require": {
+        "google/cloud-functions-framework": "^1.0",
+        "google/apiclient": "^2.8"
+    },
+    "scripts": {
+        "post-update-cmd": "Google\\Task\\Composer::cleanup",
+        "start": [
+           "Composer\\Config::disableProcessTimeout",
+           "FUNCTION_TARGET=receiveRequest php -S localhost:${PORT:-8080} vendor/google/cloud-functions-framework/router.php"
+        ]
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "Kgsearch"
+        ]
+    }
+}

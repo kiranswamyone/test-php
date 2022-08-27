@@ -1,0 +1,16 @@
+{
+    "require": {
+        "php": ">= 7.4",
+        "google/cloud-functions-framework": "^1.1"
+    },
+    "scripts": {
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "FUNCTION_SIGNATURE_TYPE=cloudevent FUNCTION_TARGET=helloGCS php -S localhost:${PORT:-8080} vendor/google/cloud-functions-framework/router.php"
+        ]
+    },
+    "require-dev": {
+        "google/cloud-storage": "^1.23",
+        "google/cloud-logging": "^1.21"
+    }
+}
